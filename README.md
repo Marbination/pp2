@@ -1,1 +1,1 @@
-OFFICIAL PP2 Git Server
+Official PP2 Git Server
