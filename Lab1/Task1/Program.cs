@@ -8,43 +8,44 @@ namespace Task1
 {
     class Program
     {
-        static bool isPrime(int n)
+        static bool Prime(int n)
         {
-            if (n < 2) //Ниже 2 простых чисел нет
-            {
-                return false;
-            }
-            for (int i = 2; i * i <= n; i++)
-            {
-                if (n % i == 0)
-                {
-                    return false;
+               if (n < 2) // ниже 2 нет никаких простых чисел
+               {
+                return false; // если вводимое число ниже 2 тогда число не простое и возвращает ложное значение
+               }
+
+               for (int i = 2; i * i <= n; i++) // проверка на неделимость чисел на другие 
+               {                                // числа начианая с 2 и дальше на числа у которых
+                   if (n % i == 0)              // квадраты ниже вводимого числа
+                   {                            // если не имеется остаток тогда число не простое
+                    return false;               // и возвравщает ложное значение
                 }
-            }
-            return true;
+               }
+            return true;   // иначе возвращает правильное значение
         }
         static void Main(string[] args)
         {
-            int a = int.Parse(Console.ReadLine());
-            string[] s = Console.ReadLine().Split();
-            int[] arr = new int[10000];
-            int cnt = 0;
+          int a = int.Parse(Console.ReadLine());// обьявить числовую переменную в котором запишется значение сколько чисел будем писать 
+          string[] s = Console.ReadLine().Split();// написать все числа и прочитать все значения которые стоят вместе с символами(пробел)
+          int[] arr = new int[10000]; // открытие массива вместимостью 10000 элементов просто чтобы мы наверняка могли использовать массив
+          int cnt = 0;                // открытие счетчика
 
-            for (int i = 0; i < s.Length; i++)
+            for (int i = 0; i < s.Length; i++) // итератируем до длины чисел которые мы ввели
             {
-                int x = int.Parse(s[i]);
-                if (isPrime(x))
+                int x = int.Parse(s[i]); // представим все строковые числа на обычные числа и запишем на x
+                if (Prime(x))  // проверим каждый элемент x на функцию Prime
                 {
-                    arr[cnt++] = x;
+                    arr[cnt++] = x; // каждый проверенный элемент будет записан в массив а счетчик элементов в массиве будет расти 
                 }
             }
-            Console.WriteLine(cnt);
+            Console.WriteLine(cnt); // вывести сколько элементов в массиве появилось т.е сколько проверенных элементов
 
             for (int i = 0; i < cnt; i++)
             {
-                Console.Write(arr[i] + " ");
+                Console.Write(arr[i] + " "); // вывести какие элементы после проверки по функции попали в массив
             }
-            Console.ReadKey();
+            Console.WriteLine();
         }
     }
 }

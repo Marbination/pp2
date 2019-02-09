@@ -9,15 +9,15 @@ namespace Task2
 {
     class Program
     {
-        static bool isPrime(int n)
+        static bool IsPrime(int x)
         {
-            if (n < 2) //Ниже 2 простых чисел нет
+            if (x < 2) 
             {
                 return false;
             }
-            for (int i = 2; i * i <= n; i++)
+            for (int i = 2; i * i <= x; i++)
             {
-                if (n % i == 0)
+                if (x % i == 0)
                 {
                     return false;
                 }
@@ -26,14 +26,32 @@ namespace Task2
         }
         static bool StIsPrime(string s)
         {
-            return isPrime(int.Parse(s));
+            return IsPrime(int.Parse(s));
         }
         static void Main(string[] args)
         {
             List<string> res = new List<string>();
-            FileStream fs = new FileStream(@"C:\Desktop\c#\Lab2\Task2\input.txt", FileMode.Open, FileAccess.Read);
-            StreamReader sr = new StreamReader(fs)
+            FileStream fs = new FileStream(@"C:\Users\ACER\Desktop\c#\Lab2\Test\2-test-input.txt", FileMode.Open, FileAccess.Read);
+            StreamReader sr = new StreamReader(fs);
 
+            string text = sr.ReadLine();
+            string[] nums = text.Split(' ');
+
+            foreach (var x in nums)
+            {
+                if (StIsPrime(x)) res.Add(x);
+            }
+            sr.Close();
+            fs.Close();
+
+            FileStream fs1 = new FileStream(@"C:\Users\ACER\Desktop\c#\Lab2\Test\2-test-output.txt", FileMode.OpenOrCreate, FileAccess.Write);
+            StreamWriter sw = new StreamWriter(fs1);
+            foreach (var x in res)
+            {
+                sw.Write(x + " ");
+            }
+            sw.Close();
+            fs1.Close();
         }
     }
 }

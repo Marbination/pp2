@@ -10,13 +10,13 @@ namespace Task3
     {
         static int[] Duplicate(int[] arr)
         {
-            int[] arr2 = new int[2000];
-            for (int i = 0; i < arr.Length; i++)
+            int[] arr2 = new int[2000];  // открытие массива вместимостью 2000 знаков чтобы мы могли наверяка иметь место для записи
+            for (int i = 0; i < arr.Length; i++) 
             {
-                arr2[i * 2] = arr[i];
+                arr2[i * 2] = arr[i];       // каждый второй и третьий элемент повторял значение элемента
                 arr2[i * 2 + 1] = arr[i];
             }
-            return arr2;
+            return arr2; //
         }
         static void Main(string[] args)
         {

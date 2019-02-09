@@ -1,0 +1,6 @@
+C:\Users\ACER\source\repos\Lab3\FarManager\bin\Debug\FarManager.exe.config
+C:\Users\ACER\source\repos\Lab3\FarManager\bin\Debug\FarManager.exe
+C:\Users\ACER\source\repos\Lab3\FarManager\bin\Debug\FarManager.pdb
+C:\Users\ACER\source\repos\Lab3\FarManager\obj\Debug\FarManager.csproj.CoreCompileInputs.cache
+C:\Users\ACER\source\repos\Lab3\FarManager\obj\Debug\FarManager.exe
+C:\Users\ACER\source\repos\Lab3\FarManager\obj\Debug\FarManager.pdb

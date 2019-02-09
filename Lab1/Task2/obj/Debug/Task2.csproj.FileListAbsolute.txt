@@ -1,0 +1,7 @@
+C:\Users\ACER\Desktop\c#\Lab1\Task2\bin\Debug\Task2.exe.config
+C:\Users\ACER\Desktop\c#\Lab1\Task2\bin\Debug\Task2.exe
+C:\Users\ACER\Desktop\c#\Lab1\Task2\bin\Debug\Task2.pdb
+C:\Users\ACER\Desktop\c#\Lab1\Task2\obj\Debug\Task2.csprojAssemblyReference.cache
+C:\Users\ACER\Desktop\c#\Lab1\Task2\obj\Debug\Task2.csproj.CoreCompileInputs.cache
+C:\Users\ACER\Desktop\c#\Lab1\Task2\obj\Debug\Task2.exe
+C:\Users\ACER\Desktop\c#\Lab1\Task2\obj\Debug\Task2.pdb
