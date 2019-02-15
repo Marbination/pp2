@@ -23,7 +23,7 @@ namespace Task1
         }
         static void Main(string[] args)
         {
-            FileStream fs = new FileStream(@"C:\Users\ACER\Desktop\c#\Lab2\Test\1-test.txt", FileMode.Open, FileAccess.Read); //использовать метод Filestream для работы с файлами в системе
+            FileStream fs = new FileStream(@"C:\Users\ACER\Desktop\c#\Lab2\Test-1\1-test.txt", FileMode.Open, FileAccess.Read); //использовать метод Filestream для работы с файлами в системе
             StreamReader sr = new StreamReader(fs); //использовать метод Streamreader для прочтения данных на которую отсылается Filestream
             string s = sr.ReadLine(); //Переобразуем Streamreader в строковый тип данных
             sr.Close(); //закрываем методы(закрываем обычно после того как мы уже закончили работу с файлом в системе)

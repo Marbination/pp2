@@ -31,7 +31,7 @@ namespace Task2
         static void Main(string[] args)
         {
             List<string> res = new List<string>();
-            FileStream fs = new FileStream(@"C:\Users\ACER\Desktop\c#\Lab2\Test\2-test-input.txt", FileMode.Open, FileAccess.Read);
+            FileStream fs = new FileStream(@"C:\Users\ACER\Desktop\c#\Lab2\Test-1\2-test-input.txt", FileMode.Open, FileAccess.Read);
             StreamReader sr = new StreamReader(fs);
 
             string text = sr.ReadLine();
@@ -44,7 +44,7 @@ namespace Task2
             sr.Close();
             fs.Close();
 
-            FileStream fs1 = new FileStream(@"C:\Users\ACER\Desktop\c#\Lab2\Test\2-test-output.txt", FileMode.OpenOrCreate, FileAccess.Write);
+            FileStream fs1 = new FileStream(@"C:\Users\ACER\Desktop\c#\Lab2\Test-1\2-test-output.txt", FileMode.OpenOrCreate, FileAccess.Write);
             StreamWriter sw = new StreamWriter(fs1);
             foreach (var x in res)
             {

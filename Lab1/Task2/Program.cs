@@ -18,9 +18,17 @@ namespace Task2
             i = id;
             y = year;
         }
+        public void PrintInfo() //Метод для вывода данных для класса Student
+        {
+            Console.WriteLine(n + " " + i + " " + y);
+        }
+    }
+    class Program
+    { 
         static void Main(string[] args)
         {
             Student s = new Student("Marlen", "18BD11059", "2018-2022");  //обьявляем новую локальную переменную для класса Student
+            s.PrintInfo();  //объявить метод PrintInfo
         }
     }
 }

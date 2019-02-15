@@ -10,14 +10,14 @@ namespace Task4
     {
         static void Main(string[] args)
         {
-            int a = int.Parse(Console.ReadLine());
+            int a = int.Parse(Console.ReadLine()); //прочитать с консоли вводимое число
             for (int i = 1; i <= a; i++)
-            {
-                for (int j = 1; j <= i; j++)
+            {                                        //двойной цикл для вывода определенного символа 
+                for (int j = 1; j <= i; j++)         //зависимо от увеличения переменного в цикле (i,j)
                 {
-                    Console.Write("[*]");
+                    Console.Write("[*]");  //вывести  символы
                 }
-                Console.Write("\n");
+                Console.Write("\n"); //Пропустить строку и начать с новой строки
             }
         }
     }

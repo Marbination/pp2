@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FarManager1", "FarManager\FarManager1.csproj", "{ED54A323-BB6C-4304-99CE-210BAB28416F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FarManager2", "FarManager2\FarManager2.csproj", "{14CF329B-51AD-4F69-8937-C9B66B554150}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task1", "Task1\Task1.csproj", "{79BE350E-96B5-4506-B64D-E832FEF44A4D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{ED54A323-BB6C-4304-99CE-210BAB28416F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{ED54A323-BB6C-4304-99CE-210BAB28416F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{ED54A323-BB6C-4304-99CE-210BAB28416F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{ED54A323-BB6C-4304-99CE-210BAB28416F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{14CF329B-51AD-4F69-8937-C9B66B554150}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{14CF329B-51AD-4F69-8937-C9B66B554150}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{14CF329B-51AD-4F69-8937-C9B66B554150}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{14CF329B-51AD-4F69-8937-C9B66B554150}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79BE350E-96B5-4506-B64D-E832FEF44A4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79BE350E-96B5-4506-B64D-E832FEF44A4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79BE350E-96B5-4506-B64D-E832FEF44A4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79BE350E-96B5-4506-B64D-E832FEF44A4D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

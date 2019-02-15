@@ -5,27 +5,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FarManager3
+namespace FarManager
 {
     enum ViewMode
     {
         ShowDirContent,
         ShowFileContent
     }
-
     class Program
     {
         static void Main(string[] args)
         {
-            DirectoryInfo dir = new DirectoryInfo(@"C:\Users\ACER\Desktop\Марлен");
+            DirectoryInfo dir = new DirectoryInfo(@"C:\Users\ACER\Desktop\Марлен\ICT");
             Stack<Layer> history = new Stack<Layer>();
             history.Push(
                 new Layer
                 {
                     Content = dir.GetFileSystemInfos()
-                }
-            );
-
+                });
             ViewMode viewMode = ViewMode.ShowDirContent;
             bool esc = false;
             while (!esc)
@@ -46,7 +43,7 @@ namespace FarManager3
                         if (fileSystemInfo3.GetType() == typeof(DirectoryInfo))
                         {
                             DirectoryInfo directoryInfo = fileSystemInfo3 as DirectoryInfo;
-                            Directory.Move(fileSystemInfo3.FullName, directoryInfo.Parent + "/" + name);
+                            Directory.Move(fileSystemInfo3.FullName, directoryInfo.Parent.FullName + "/" + name);
                             history.Peek().Content = directoryInfo.Parent.GetFileSystemInfos();
                         }
                         else
@@ -55,7 +52,6 @@ namespace FarManager3
                             File.Move(fileSystemInfo3.FullName, fileInfo.Directory.FullName + "/" + name);
                             history.Peek().Content = fileInfo.Directory.GetFileSystemInfos();
                         }
-
                         break;
                     case ConsoleKey.Delete:
                         int x2 = history.Peek().SelectedItem;
@@ -73,21 +69,26 @@ namespace FarManager3
                             File.Delete(fileSystemInfo2.FullName);
                             history.Peek().Content = fileInfo.Directory.GetFileSystemInfos();
                         }
-
                         break;
                     case ConsoleKey.UpArrow:
-                        if(history.Peek().SelectedItem -1 < 0)
+                        if (history.Peek().SelectedItem - 1 < 0)
                         {
                             history.Peek().SelectedItem = history.Peek().Content.Length - 1;
                         }
-                        history.Peek().SelectedItem--;
+                        else
+                        {
+                            history.Peek().SelectedItem--;
+                        }
                         break;
                     case ConsoleKey.DownArrow:
-                        if (history.Peek().SelectedItem + 1 >= history.Peek().Content.Length);
+                        if (history.Peek().SelectedItem + 1 >= history.Peek().Content.Length)
                         {
                             history.Peek().SelectedItem = 0;
                         }
-                        history.Peek().SelectedItem++;
+                        else
+                        {
+                            history.Peek().SelectedItem++;
+                        }
                         break;
                     case ConsoleKey.Enter:
                         int x = history.Peek().SelectedItem;
